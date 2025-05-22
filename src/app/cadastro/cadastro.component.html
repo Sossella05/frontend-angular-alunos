@@ -1,0 +1,22 @@
+<p>cadastro works!</p>
+<p>cadastro works!</p>
+
+<form (ngSubmit)="salvar()">
+    <div>
+        <label>Nome:</label>
+        <input name="nome" [(ngModel)]="aluno.nome">
+    </div>
+    <div>
+        <label>Idade:</label>
+        <input name="idade" type="number" [(ngModel)]="aluno.idade">
+    </div>
+
+     <label>Matriculado:
+        <select [(ngModel)]="aluno.matriculado">
+        <option *ngFor="let opt of options" [value]="opt">{{ opt }}</option>
+        </select>
+    </label>
+    <br />
+
+    <button type="submit">Salvar</button>
+</form>
